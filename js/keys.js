@@ -1,4 +1,4 @@
-const KEYS = [
+export default [
   {
     code: 'Backquote',
     ru: 'ё',
@@ -512,5 +512,3 @@ const KEYS = [
     classes: ['key', 'right-arrow'],
   },
 ];
-
-export default KEYS;

@@ -1,4 +1,4 @@
-import KEYS from './keys';
+import KEYS from './keys.js';
 
 const CONTAINER = document.createElement('div');
 const TEXTAREA = document.createElement('textarea');
