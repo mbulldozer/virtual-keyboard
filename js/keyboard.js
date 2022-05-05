@@ -8,6 +8,7 @@ class Keyboard {
     this.keyboard = null;
     this.pressed = [];
     this.keyNodes = [];
+    this.lang = localStorage.getItem('lang') || 'eng';
 
     this.init();
   }
@@ -31,7 +32,7 @@ class Keyboard {
       const keyNode = document.createElement('button');
       keyNode.setAttribute('type', 'button');
       keyNode.dataset.code = key.code;
-      keyNode.innerHTML = key.eng;
+      keyNode.innerHTML = key[this.lang];
       key.classes.forEach((el) => keyNode.classList.add(el));
 
       this.keyNodes.push(keyNode);
@@ -41,6 +42,40 @@ class Keyboard {
     this.textarea.focus();
     this.textarea.addEventListener('blur', () => {
       this.textarea.focus();
+    });
+  }
+
+  chnageLang() {
+    if (this.pressed.includes('ShiftLeft') && this.pressed.includes('AltLeft')) {
+      this.lang = this.lang === 'eng' ? 'ru' : 'eng';
+      localStorage.setItem('lang', this.lang);
+    }
+  }
+
+  isShiftPressed() {
+    return this.pressed.includes('ShiftLeft') || this.pressed.includes('ShiftRight');
+  }
+
+  isCapsLockPressed() {
+    return this.pressed.includes('CapsLock');
+  }
+
+  update() {
+    this.keyNodes.forEach((keyNode) => {
+      const key = this.keys.find((el) => el.code === keyNode.dataset.code);
+      if (this.isShiftPressed() && this.isCapsLockPressed() && !key.controlKey) {
+        keyNode.innerHTML = key[`${this.lang}_add`]
+          ? key[`${this.lang}_add`]
+          : key[this.lang];
+      } else if (this.isShiftPressed() && !this.isCapsLockPressed() && !key.controlKey) {
+        keyNode.innerHTML = key[`${this.lang}_add`]
+          ? key[`${this.lang}_add`]
+          : key[this.lang].toUpperCase();
+      } else if (this.isCapsLockPressed() && !key.controlKey) {
+        keyNode.innerHTML = key[this.lang].toUpperCase();
+      } else {
+        keyNode.innerHTML = key[this.lang];
+      }
     });
   }
 
@@ -54,6 +89,8 @@ class Keyboard {
 
   press(code) {
     this.pressKey(code);
+    this.chnageLang();
+    this.update();
   }
 
   unpressKey(code) {
@@ -62,6 +99,7 @@ class Keyboard {
       this.pressed = this.pressed.filter((el) => el !== code);
       node.classList.remove('pressed');
     }
+    this.update();
   }
 
   unpress(code) {

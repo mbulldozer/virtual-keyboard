@@ -1,6 +1,7 @@
 export default [
   {
     code: 'Backquote',
+    controlKey: false,
     ru: 'ё',
     eng: '`',
     ru_add: null,
@@ -9,6 +10,7 @@ export default [
   },
   {
     code: 'Digit1',
+    controlKey: false,
     ru: '1',
     eng: '1',
     ru_add: '!',
@@ -17,6 +19,7 @@ export default [
   },
   {
     code: 'Digit2',
+    controlKey: false,
     ru: '2',
     eng: '2',
     ru_add: '"',
@@ -25,6 +28,7 @@ export default [
   },
   {
     code: 'Digit3',
+    controlKey: false,
     ru: '3',
     eng: '3',
     ru_add: '№',
@@ -33,6 +37,7 @@ export default [
   },
   {
     code: 'Digit4',
+    controlKey: false,
     ru: '4',
     eng: '4',
     ru_add: ';',
@@ -41,6 +46,7 @@ export default [
   },
   {
     code: 'Digit5',
+    controlKey: false,
     ru: '5',
     eng: '5',
     ru_add: '%',
@@ -49,6 +55,7 @@ export default [
   },
   {
     code: 'Digit6',
+    controlKey: false,
     ru: '6',
     eng: '6',
     ru_add: ':',
@@ -57,6 +64,7 @@ export default [
   },
   {
     code: 'Digit7',
+    controlKey: false,
     ru: '7',
     eng: '7',
     ru_add: '?',
@@ -65,6 +73,7 @@ export default [
   },
   {
     code: 'Digit8',
+    controlKey: false,
     ru: '8',
     eng: '8',
     ru_add: '*',
@@ -73,6 +82,7 @@ export default [
   },
   {
     code: 'Digit9',
+    controlKey: false,
     ru: '9',
     eng: '9',
     ru_add: '(',
@@ -81,6 +91,7 @@ export default [
   },
   {
     code: 'Digit0',
+    controlKey: false,
     ru: '0',
     eng: '0',
     ru_add: ')',
@@ -89,6 +100,7 @@ export default [
   },
   {
     code: 'Minus',
+    controlKey: false,
     ru: '-',
     eng: '-',
     ru_add: '_',
@@ -97,6 +109,7 @@ export default [
   },
   {
     code: 'Equal',
+    controlKey: false,
     ru: '=',
     eng: '=',
     ru_add: '+',
@@ -105,6 +118,7 @@ export default [
   },
   {
     code: 'Backspace',
+    controlKey: true,
     ru: 'Backspace',
     eng: 'Backspace',
     ru_add: null,
@@ -113,6 +127,7 @@ export default [
   },
   {
     code: 'Tab',
+    controlKey: true,
     ru: 'Tab',
     eng: 'Tab',
     ru_add: null,
@@ -121,6 +136,7 @@ export default [
   },
   {
     code: 'KeyQ',
+    controlKey: false,
     ru: 'й',
     eng: 'q',
     ru_add: null,
@@ -129,6 +145,7 @@ export default [
   },
   {
     code: 'KeyW',
+    controlKey: false,
     ru: 'ц',
     eng: 'w',
     ru_add: null,
@@ -137,6 +154,7 @@ export default [
   },
   {
     code: 'KeyE',
+    controlKey: false,
     ru: 'у',
     eng: 'e',
     ru_add: null,
@@ -145,6 +163,7 @@ export default [
   },
   {
     code: 'KeyR',
+    controlKey: false,
     ru: 'к',
     eng: 'r',
     ru_add: null,
@@ -153,6 +172,7 @@ export default [
   },
   {
     code: 'KeyT',
+    controlKey: false,
     ru: 'е',
     eng: 't',
     ru_add: null,
@@ -161,6 +181,7 @@ export default [
   },
   {
     code: 'KeyY',
+    controlKey: false,
     ru: 'н',
     eng: 'y',
     ru_add: null,
@@ -169,6 +190,7 @@ export default [
   },
   {
     code: 'KeyU',
+    controlKey: false,
     ru: 'г',
     eng: 'u',
     ru_add: null,
@@ -177,6 +199,7 @@ export default [
   },
   {
     code: 'KeyI',
+    controlKey: false,
     ru: 'ш',
     eng: 'i',
     ru_add: null,
@@ -185,6 +208,7 @@ export default [
   },
   {
     code: 'KeyO',
+    controlKey: false,
     ru: 'щ',
     eng: 'o',
     ru_add: null,
@@ -193,6 +217,7 @@ export default [
   },
   {
     code: 'KeyP',
+    controlKey: false,
     ru: 'з',
     eng: 'p',
     ru_add: null,
@@ -201,6 +226,7 @@ export default [
   },
   {
     code: 'BracketLeft',
+    controlKey: false,
     ru: 'х',
     eng: '[',
     ru_add: null,
@@ -209,6 +235,7 @@ export default [
   },
   {
     code: 'BracketRight',
+    controlKey: false,
     ru: 'ъ',
     eng: ']',
     ru_add: null,
@@ -217,6 +244,7 @@ export default [
   },
   {
     code: 'Backslash',
+    controlKey: false,
     ru: '\\',
     eng: '\\',
     ru_add: '/',
@@ -225,6 +253,7 @@ export default [
   },
   {
     code: 'Delete',
+    controlKey: true,
     ru: 'Del',
     eng: 'Del',
     ru_add: null,
@@ -233,6 +262,7 @@ export default [
   },
   {
     code: 'CapsLock',
+    controlKey: true,
     ru: 'Caps Lock',
     eng: 'Caps Lock',
     ru_add: null,
@@ -241,6 +271,7 @@ export default [
   },
   {
     code: 'KeyA',
+    controlKey: false,
     ru: 'ф',
     eng: 'a',
     ru_add: null,
@@ -249,6 +280,7 @@ export default [
   },
   {
     code: 'KeyS',
+    controlKey: false,
     ru: 'ы',
     eng: 's',
     ru_add: null,
@@ -257,6 +289,7 @@ export default [
   },
   {
     code: 'KeyD',
+    controlKey: false,
     ru: 'в',
     eng: 'd',
     ru_add: null,
@@ -265,6 +298,7 @@ export default [
   },
   {
     code: 'KeyF',
+    controlKey: false,
     ru: 'а',
     eng: 'f',
     ru_add: null,
@@ -273,6 +307,7 @@ export default [
   },
   {
     code: 'KeyG',
+    controlKey: false,
     ru: 'п',
     eng: 'g',
     ru_add: null,
@@ -281,6 +316,7 @@ export default [
   },
   {
     code: 'KeyH',
+    controlKey: false,
     ru: 'р',
     eng: 'h',
     ru_add: null,
@@ -289,6 +325,7 @@ export default [
   },
   {
     code: 'KeyJ',
+    controlKey: false,
     ru: 'о',
     eng: 'j',
     ru_add: null,
@@ -297,6 +334,7 @@ export default [
   },
   {
     code: 'KeyK',
+    controlKey: false,
     ru: 'л',
     eng: 'k',
     ru_add: null,
@@ -305,6 +343,7 @@ export default [
   },
   {
     code: 'KeyL',
+    controlKey: false,
     ru: 'д',
     eng: 'l',
     ru_add: null,
@@ -313,6 +352,7 @@ export default [
   },
   {
     code: 'Semicolon',
+    controlKey: false,
     ru: 'ж',
     eng: ';',
     ru_add: null,
@@ -321,6 +361,7 @@ export default [
   },
   {
     code: 'Quote',
+    controlKey: false,
     ru: 'э',
     eng: "'",
     ru_add: null,
@@ -329,6 +370,7 @@ export default [
   },
   {
     code: 'Enter',
+    controlKey: true,
     ru: 'Enter',
     eng: 'Enter',
     ru_add: null,
@@ -337,6 +379,7 @@ export default [
   },
   {
     code: 'ShiftLeft',
+    controlKey: true,
     ru: 'Shift',
     eng: 'Shift',
     ru_add: null,
@@ -345,6 +388,7 @@ export default [
   },
   {
     code: 'KeyZ',
+    controlKey: false,
     ru: 'я',
     eng: 'z',
     ru_add: null,
@@ -353,6 +397,7 @@ export default [
   },
   {
     code: 'KeyX',
+    controlKey: false,
     ru: 'ч',
     eng: 'x',
     ru_add: null,
@@ -361,6 +406,7 @@ export default [
   },
   {
     code: 'KeyC',
+    controlKey: false,
     ru: 'с',
     eng: 'c',
     ru_add: null,
@@ -369,6 +415,7 @@ export default [
   },
   {
     code: 'KeyV',
+    controlKey: false,
     ru: 'м',
     eng: 'v',
     ru_add: null,
@@ -377,6 +424,7 @@ export default [
   },
   {
     code: 'KeyB',
+    controlKey: false,
     ru: 'и',
     eng: 'b',
     ru_add: null,
@@ -385,6 +433,7 @@ export default [
   },
   {
     code: 'KeyN',
+    controlKey: false,
     ru: 'т',
     eng: 'n',
     ru_add: null,
@@ -393,6 +442,7 @@ export default [
   },
   {
     code: 'KeyM',
+    controlKey: false,
     ru: 'ь',
     eng: 'm',
     ru_add: null,
@@ -401,30 +451,34 @@ export default [
   },
   {
     code: 'Comma',
+    controlKey: false,
     ru: 'б',
     eng: ',',
     ru_add: null,
-    eng_add: null,
+    eng_add: '<',
     classes: ['key', 'letter'],
   },
   {
     code: 'Period',
+    controlKey: false,
     ru: 'ю',
     eng: '.',
     ru_add: null,
-    eng_add: null,
+    eng_add: '>',
     classes: ['key', 'letter'],
   },
   {
     code: 'Slash',
-    ru: '/',
+    controlKey: false,
+    ru: '.',
     eng: '/',
-    ru_add: null,
-    eng_add: null,
+    ru_add: ',',
+    eng_add: '?',
     classes: ['key', 'letter'],
   },
   {
     code: 'ArrowUp',
+    controlKey: true,
     ru: '<i class="fa fa-solid fa-caret-up fa-2x"></i>',
     eng: '<i class="fa fa-solid fa-caret-up fa-2x"></i>',
     ru_add: null,
@@ -433,6 +487,7 @@ export default [
   },
   {
     code: 'ShiftRight',
+    controlKey: true,
     ru: 'Shift',
     eng: 'Shift',
     ru_add: null,
@@ -441,6 +496,7 @@ export default [
   },
   {
     code: 'ControlLeft',
+    controlKey: true,
     ru: 'Ctrl',
     eng: 'Ctrl',
     ru_add: null,
@@ -449,6 +505,7 @@ export default [
   },
   {
     code: 'MetaLeft',
+    controlKey: true,
     ru: 'Win',
     eng: 'Win',
     ru_add: null,
@@ -457,6 +514,7 @@ export default [
   },
   {
     code: 'AltLeft',
+    controlKey: true,
     ru: 'Alt',
     eng: 'Alt',
     ru_add: null,
@@ -465,6 +523,7 @@ export default [
   },
   {
     code: 'Space',
+    controlKey: true,
     ru: 'Space',
     eng: 'Space',
     ru_add: null,
@@ -473,6 +532,7 @@ export default [
   },
   {
     code: 'AltRight',
+    controlKey: true,
     ru: 'Alt',
     eng: 'Alt',
     ru_add: null,
@@ -481,6 +541,7 @@ export default [
   },
   {
     code: 'ControlRight',
+    controlKey: true,
     ru: 'Ctrl',
     eng: 'Ctrl',
     ru_add: null,
@@ -489,6 +550,7 @@ export default [
   },
   {
     code: 'ArrowLeft',
+    controlKey: true,
     ru: '<i class="fa fa-solid fa-caret-left fa-2x"></i>',
     eng: '<i class="fa fa-solid fa-caret-left fa-2x"></i>',
     ru_add: null,
@@ -497,6 +559,7 @@ export default [
   },
   {
     code: 'ArrowDown',
+    controlKey: true,
     ru: '<i class="fa fa-solid fa-caret-down fa-2x"></i>',
     eng: '<i class="fa fa-solid fa-caret-down fa-2x"></i>',
     ru_add: null,
@@ -505,6 +568,7 @@ export default [
   },
   {
     code: 'ArrowRight',
+    controlKey: true,
     ru: '<i class="fa fa-solid fa-caret-right fa-2x"></i>',
     eng: '<i class="fa fa-solid fa-caret-right fa-2x"></i>',
     ru_add: null,
