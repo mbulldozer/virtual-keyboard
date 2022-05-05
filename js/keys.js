@@ -1,5 +1,6 @@
 const KEYS = [
   {
+    code: "Backquote",
     ru: "ё",
     eng: "`",
     ru_add: null,
@@ -7,6 +8,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Digit1",
     ru: "1",
     eng: "1",
     ru_add: "!",
@@ -14,6 +16,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Digit2",
     ru: "2",
     eng: "2",
     ru_add: "\"",
@@ -21,6 +24,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Digit3",
     ru: "3",
     eng: "3",
     ru_add: "№",
@@ -28,6 +32,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Digit4",
     ru: "4",
     eng: "4",
     ru_add: ";",
@@ -35,6 +40,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Digit5",
     ru: "5",
     eng: "5",
     ru_add: "%",
@@ -42,6 +48,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Digit6",
     ru: "6",
     eng: "6",
     ru_add: ":",
@@ -49,6 +56,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Digit7",
     ru: "7",
     eng: "7",
     ru_add: "?",
@@ -56,6 +64,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Digit8",
     ru: "8",
     eng: "8",
     ru_add: "*",
@@ -63,6 +72,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Digit9",
     ru: "9",
     eng: "9",
     ru_add: "(",
@@ -70,6 +80,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Digit0",
     ru: "0",
     eng: "0",
     ru_add: ")",
@@ -77,6 +88,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Minus",
     ru: "-",
     eng: "-",
     ru_add: "_",
@@ -84,6 +96,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Equal",
     ru: "=",
     eng: "=",
     ru_add: "+",
@@ -91,6 +104,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Backspace",
     ru: "Backspace",
     eng: "Backspace",
     ru_add: null,
@@ -98,6 +112,7 @@ const KEYS = [
     classes: ["key", "backspace"],
   },
   {
+    code: "Tab",
     ru: "Tab",
     eng: "Tab",
     ru_add: null,
@@ -105,6 +120,7 @@ const KEYS = [
     classes: ["key", "tab"],
   },
   {
+    code: "KeyQ",
     ru: "й",
     eng: "q",
     ru_add: null,
@@ -112,6 +128,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyW",
     ru: "ц",
     eng: "w",
     ru_add: null,
@@ -119,6 +136,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyE",
     ru: "у",
     eng: "e",
     ru_add: null,
@@ -126,6 +144,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyR",
     ru: "к",
     eng: "r",
     ru_add: null,
@@ -133,6 +152,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyT",
     ru: "е",
     eng: "t",
     ru_add: null,
@@ -140,6 +160,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyY",
     ru: "н",
     eng: "y",
     ru_add: null,
@@ -147,6 +168,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyU",
     ru: "г",
     eng: "u",
     ru_add: null,
@@ -154,6 +176,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyI",
     ru: "ш",
     eng: "i",
     ru_add: null,
@@ -161,6 +184,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyO",
     ru: "щ",
     eng: "o",
     ru_add: null,
@@ -168,6 +192,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyP",
     ru: "з",
     eng: "p",
     ru_add: null,
@@ -175,6 +200,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "BracketLeft",
     ru: "х",
     eng: "[",
     ru_add: null,
@@ -182,6 +208,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "BracketRight",
     ru: "ъ",
     eng: "]",
     ru_add: null,
@@ -189,6 +216,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Backslash",
     ru: "\\",
     eng: "\\",
     ru_add: "/",
@@ -196,6 +224,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Delete",
     ru: "Del",
     eng: "Del",
     ru_add: null,
@@ -203,6 +232,7 @@ const KEYS = [
     classes: ["key", "delete"],
   },
   {
+    code: "CapsLock",
     ru: "Caps Lock",
     eng: "Caps Lock",
     ru_add: null,
@@ -210,6 +240,7 @@ const KEYS = [
     classes: ["key", "caps"],
   },
   {
+    code: "KeyA",
     ru: "ф",
     eng: "a",
     ru_add: null,
@@ -217,6 +248,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyS",
     ru: "ы",
     eng: "s",
     ru_add: null,
@@ -224,6 +256,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyD",
     ru: "в",
     eng: "d",
     ru_add: null,
@@ -231,6 +264,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyF",
     ru: "а",
     eng: "f",
     ru_add: null,
@@ -238,6 +272,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyG",
     ru: "п",
     eng: "g",
     ru_add: null,
@@ -245,6 +280,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyH",
     ru: "р",
     eng: "h",
     ru_add: null,
@@ -252,6 +288,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyJ",
     ru: "о",
     eng: "j",
     ru_add: null,
@@ -259,6 +296,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyK",
     ru: "л",
     eng: "k",
     ru_add: null,
@@ -266,6 +304,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyL",
     ru: "д",
     eng: "l",
     ru_add: null,
@@ -273,6 +312,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Semicolon",
     ru: "ж",
     eng: ";",
     ru_add: null,
@@ -280,6 +320,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Quote",
     ru: "э",
     eng: "'",
     ru_add: null,
@@ -287,6 +328,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Enter",
     ru: "Enter",
     eng: "Enter",
     ru_add: null,
@@ -294,6 +336,7 @@ const KEYS = [
     classes: ["key", "enter"],
   },
   {
+    code: "ShiftLeft",
     ru: "Shift",
     eng: "Shift",
     ru_add: null,
@@ -301,13 +344,7 @@ const KEYS = [
     classes: ["key", "left-shift"],
   },
   {
-    ru: "\\",
-    eng: "\\",
-    ru_add: null,
-    eng_add: null,
-    classes: ["key", "letter"],
-  },
-  {
+    code: "KeyZ",
     ru: "я",
     eng: "z",
     ru_add: null,
@@ -315,6 +352,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyX",
     ru: "ч",
     eng: "x",
     ru_add: null,
@@ -322,6 +360,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyC",
     ru: "с",
     eng: "c",
     ru_add: null,
@@ -329,6 +368,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyV",
     ru: "м",
     eng: "v",
     ru_add: null,
@@ -336,6 +376,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyB",
     ru: "и",
     eng: "b",
     ru_add: null,
@@ -343,6 +384,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyN",
     ru: "т",
     eng: "n",
     ru_add: null,
@@ -350,6 +392,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "KeyM",
     ru: "ь",
     eng: "m",
     ru_add: null,
@@ -357,6 +400,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Comma",
     ru: "б",
     eng: ",",
     ru_add: null,
@@ -364,6 +408,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Period",
     ru: "ю",
     eng: ".",
     ru_add: null,
@@ -371,6 +416,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "Slash",
     ru: "/",
     eng: "/",
     ru_add: null,
@@ -378,6 +424,7 @@ const KEYS = [
     classes: ["key", "letter"],
   },
   {
+    code: "ArrowUp",
     ru: "<i class=\"fa fa-solid fa-caret-up fa-2x\"></i>",
     eng: "<i class=\"fa fa-solid fa-caret-up fa-2x\"></i>",
     ru_add: null,
@@ -385,6 +432,7 @@ const KEYS = [
     classes: ["key", "up-arrow"],
   },
   {
+    code: "ShiftRight",
     ru: "Shift",
     eng: "Shift",
     ru_add: null,
@@ -392,6 +440,7 @@ const KEYS = [
     classes: ["key", "right-shift"],
   },
   {
+    code: "ControlLeft",
     ru: "Ctrl",
     eng: "Ctrl",
     ru_add: null,
@@ -399,6 +448,7 @@ const KEYS = [
     classes: ["key", "left-ctrl"],
   },
   {
+    code: "MetaLeft",
     ru: "Win",
     eng: "Win",
     ru_add: null,
@@ -406,6 +456,7 @@ const KEYS = [
     classes: ["key", "win"],
   },
   {
+    code: "AltLeft",
     ru: "Alt",
     eng: "Alt",
     ru_add: null,
@@ -413,6 +464,7 @@ const KEYS = [
     classes: ["key", "left-alt"],
   },
   {
+    code: "Space",
     ru: "Space",
     eng: "Space",
     ru_add: null,
@@ -420,6 +472,7 @@ const KEYS = [
     classes: ["key", "space"],
   },
   {
+    code: "AltRight",
     ru: "Alt",
     eng: "Alt",
     ru_add: null,
@@ -427,6 +480,7 @@ const KEYS = [
     classes: ["key", "right-alt"],
   },
   {
+    code: "ControlRight",
     ru: "Ctrl",
     eng: "Ctrl",
     ru_add: null,
@@ -434,6 +488,7 @@ const KEYS = [
     classes: ["key", "right-ctrl"],
   },
   {
+    code: "ArrowLeft",
     ru: "<i class=\"fa fa-solid fa-caret-left fa-2x\"></i>",
     eng: "<i class=\"fa fa-solid fa-caret-left fa-2x\"></i>",
     ru_add: null,
@@ -441,6 +496,7 @@ const KEYS = [
     classes: ["key", "left-arrow"],
   },
   {
+    code: "ArrowDown",
     ru: "<i class=\"fa fa-solid fa-caret-down fa-2x\"></i>",
     eng: "<i class=\"fa fa-solid fa-caret-down fa-2x\"></i>",
     ru_add: null,
@@ -448,6 +504,7 @@ const KEYS = [
     classes: ["key", "down-arrow"],
   },
   {
+    code: "ArrowRight",
     ru: "<i class=\"fa fa-solid fa-caret-right fa-2x\"></i>",
     eng: "<i class=\"fa fa-solid fa-caret-right fa-2x\"></i>",
     ru_add: null,
