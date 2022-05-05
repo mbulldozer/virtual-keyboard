@@ -4,12 +4,22 @@ const KEYBOARD = new Keyboard();
 
 window.addEventListener('mousedown', (e) => {
   if (e.target.tagName === 'BUTTON') {
-    e.target.classList.add('pressed');
+    KEYBOARD.press(e.target.dataset.code);
   }
 });
 
 window.addEventListener('mouseup', (e) => {
   if (e.target.tagName === 'BUTTON') {
-    e.target.classList.remove('pressed');
+    KEYBOARD.unpress(e.target.dataset.code);
   }
+});
+
+window.addEventListener('keydown', (e) => {
+  KEYBOARD.press(e.code);
+  e.preventDefault();
+});
+
+window.addEventListener('keyup', (e) => {
+  KEYBOARD.unpress(e.code);
+  e.preventDefault();
 });

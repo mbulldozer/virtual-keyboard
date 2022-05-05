@@ -6,6 +6,8 @@ class Keyboard {
     this.container = null;
     this.textarea = null;
     this.keyboard = null;
+    this.pressed = [];
+    this.keyNodes = [];
 
     this.init();
   }
@@ -28,9 +30,11 @@ class Keyboard {
     this.keys.forEach((key) => {
       const keyNode = document.createElement('button');
       keyNode.setAttribute('type', 'button');
-      keyNode.innerHTML = key.classes.includes('letter') ? key.eng.toUpperCase() : key.eng;
+      keyNode.dataset.code = key.code;
+      keyNode.innerHTML = key.eng;
       key.classes.forEach((el) => keyNode.classList.add(el));
 
+      this.keyNodes.push(keyNode);
       this.keyboard.append(keyNode);
     });
 
@@ -38,6 +42,30 @@ class Keyboard {
     this.textarea.addEventListener('blur', () => {
       this.textarea.focus();
     });
+  }
+
+  pressKey(code) {
+    const node = this.keyNodes.find((el) => el.dataset.code === code);
+    if (node) {
+      this.pressed.push(code);
+      node.classList.add('pressed');
+    }
+  }
+
+  press(code) {
+    this.pressKey(code);
+  }
+
+  unpressKey(code) {
+    const node = this.keyNodes.find((el) => el.dataset.code === code);
+    if (node) {
+      this.pressed = this.pressed.filter((el) => el !== code);
+      node.classList.remove('pressed');
+    }
+  }
+
+  unpress(code) {
+    this.unpressKey(code);
   }
 }
 
