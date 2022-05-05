@@ -1,38 +1,44 @@
 import KEYS from './keys.js';
 
-const CONTAINER = document.createElement('div');
-const TEXTAREA = document.createElement('textarea');
-const KEYBOARD = document.createElement('div');
+class Keyboard {
+  constructor() {
+    this.keys = KEYS;
+    this.container = null;
+    this.textarea = null;
+    this.keyboard = null;
 
-CONTAINER.classList.add('container');
-TEXTAREA.classList.add('textarea');
-TEXTAREA.setAttribute('cols', 30);
-TEXTAREA.setAttribute('rows', 10);
-KEYBOARD.classList.add('keyboard');
-document.body.append(CONTAINER);
-CONTAINER.append(TEXTAREA, KEYBOARD);
-TEXTAREA.focus();
-
-KEYS.forEach((key) => {
-  const keyNode = document.createElement('button');
-  keyNode.setAttribute('type', 'button');
-  keyNode.innerHTML = key.classes.includes('letter') ? key.eng.toUpperCase() : key.eng;
-  key.classes.forEach((el) => keyNode.classList.add(el));
-  KEYBOARD.append(keyNode);
-});
-
-window.addEventListener('mousedown', (e) => {
-  if (e.target.tagName === 'BUTTON') {
-    e.target.classList.add('pressed');
+    this.init();
   }
-});
 
-window.addEventListener('mouseup', (e) => {
-  if (e.target.tagName === 'BUTTON') {
-    e.target.classList.remove('pressed');
+  init() {
+    this.container = document.createElement('div');
+    this.container.classList.add('container');
+
+    this.textarea = document.createElement('textarea');
+    this.textarea.classList.add('textarea');
+    this.textarea.setAttribute('cols', 30);
+    this.textarea.setAttribute('rows', 10);
+
+    this.keyboard = document.createElement('div');
+    this.keyboard.classList.add('keyboard');
+
+    document.body.append(this.container);
+    this.container.append(this.textarea, this.keyboard);
+
+    this.keys.forEach((key) => {
+      const keyNode = document.createElement('button');
+      keyNode.setAttribute('type', 'button');
+      keyNode.innerHTML = key.classes.includes('letter') ? key.eng.toUpperCase() : key.eng;
+      key.classes.forEach((el) => keyNode.classList.add(el));
+
+      this.keyboard.append(keyNode);
+    });
+
+    this.textarea.focus();
+    this.textarea.addEventListener('blur', () => {
+      this.textarea.focus();
+    });
   }
-});
+}
 
-TEXTAREA.addEventListener('blur', () => {
-  TEXTAREA.focus();
-});
+export default Keyboard;
