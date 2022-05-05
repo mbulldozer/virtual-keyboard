@@ -94,8 +94,21 @@ class Keyboard {
     if (!key.controlKey) {
       this.textarea.value = this.textarea.value.substring(0, start) + this.getValue(key) + this.textarea.value.substring(end);
       this.changePosition(start + 1);
-    } else if (code === 'Tab' || code === 'Enter') {
-      const s = code === 'Tab' ? '\t' : '\n';
+    } else if (code === 'Tab' || code === 'Enter' || code === 'Space') {
+      let s = code === 'Tab' ? '\t' : '\n';
+      switch (code) {
+        case 'Tab':
+          s = '\t';
+          break;
+        case 'Enter':
+          s = '\n';
+          break;
+        case 'Space':
+          s = ' ';
+          break;
+        default:
+          break;
+      }
       this.textarea.value = this.textarea.value.substring(0, start) + s + this.textarea.value.substring(end);
       this.changePosition(start + 1);
     } else if (code === 'Backspace') {
