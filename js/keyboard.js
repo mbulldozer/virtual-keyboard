@@ -63,17 +63,16 @@ class Keyboard {
   getValue(key) {
     if (this.isShiftPressed() && this.isCapsLockPressed() && !key.controlKey) {
       return key[`${this.lang}_add`]
-          ? key[`${this.lang}_add`]
-          : key[this.lang];
-    } else if (this.isShiftPressed() && !this.isCapsLockPressed() && !key.controlKey) {
+        ? key[`${this.lang}_add`]
+        : key[this.lang];
+    } if (this.isShiftPressed() && !this.isCapsLockPressed() && !key.controlKey) {
       return key[`${this.lang}_add`]
-          ? key[`${this.lang}_add`]
-          : key[this.lang].toUpperCase();
-    } else if (this.isCapsLockPressed() && !key.controlKey) {
+        ? key[`${this.lang}_add`]
+        : key[this.lang].toUpperCase();
+    } if (this.isCapsLockPressed() && !key.controlKey) {
       return key[this.lang].toUpperCase();
-    } else {
-      return key[this.lang];
     }
+    return key[this.lang];
   }
 
   update() {
@@ -83,10 +82,37 @@ class Keyboard {
     });
   }
 
+  changePosition(value) {
+    this.textarea.selectionStart = value;
+    this.textarea.selectionEnd = value;
+  }
+
   updateText(code) {
+    const start = this.textarea.selectionStart;
+    const end = this.textarea.selectionEnd;
     const key = this.keys.find((el) => el.code === code);
     if (!key.controlKey) {
-      this.textarea.value += this.getValue(key);
+      this.textarea.value = this.textarea.value.substring(0, start) + this.getValue(key) + this.textarea.value.substring(end);
+      this.changePosition(start + 1);
+    } else if (code === 'Tab' || code === 'Enter') {
+      const s = code === 'Tab' ? '\t' : '\n';
+      this.textarea.value = this.textarea.value.substring(0, start) + s + this.textarea.value.substring(end);
+      this.changePosition(start + 1);
+    } else if (code === 'Backspace') {
+      if (start === end) {
+        this.textarea.value = this.textarea.value.substring(0, start - 1) + this.textarea.value.substring(end);
+        start !== 0 ? this.changePosition(start - 1) : this.changePosition(0);
+      } else {
+        this.textarea.value = this.textarea.value.substring(0, start) + this.textarea.value.substring(end);
+        this.changePosition(start);
+      }
+    } else if (code === 'Delete') {
+      if (start === end && end !== this.textarea.value.length) {
+        this.textarea.value = this.textarea.value.substring(0, start) + this.textarea.value.substring(end + 1);
+      } else {
+        this.textarea.value = this.textarea.value.substring(0, start) + this.textarea.value.substring(end);
+      }
+      this.changePosition(start);
     }
   }
 

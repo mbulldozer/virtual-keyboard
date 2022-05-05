@@ -15,6 +15,7 @@ body {
     color: #FFF;
     font-size: 18px;
     resize: none;
+    tab-size: 16;
 }
 
 .keyboard {
