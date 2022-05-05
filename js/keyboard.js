@@ -60,23 +60,34 @@ class Keyboard {
     return this.pressed.includes('CapsLock');
   }
 
+  getValue(key) {
+    if (this.isShiftPressed() && this.isCapsLockPressed() && !key.controlKey) {
+      return key[`${this.lang}_add`]
+          ? key[`${this.lang}_add`]
+          : key[this.lang];
+    } else if (this.isShiftPressed() && !this.isCapsLockPressed() && !key.controlKey) {
+      return key[`${this.lang}_add`]
+          ? key[`${this.lang}_add`]
+          : key[this.lang].toUpperCase();
+    } else if (this.isCapsLockPressed() && !key.controlKey) {
+      return key[this.lang].toUpperCase();
+    } else {
+      return key[this.lang];
+    }
+  }
+
   update() {
     this.keyNodes.forEach((keyNode) => {
       const key = this.keys.find((el) => el.code === keyNode.dataset.code);
-      if (this.isShiftPressed() && this.isCapsLockPressed() && !key.controlKey) {
-        keyNode.innerHTML = key[`${this.lang}_add`]
-          ? key[`${this.lang}_add`]
-          : key[this.lang];
-      } else if (this.isShiftPressed() && !this.isCapsLockPressed() && !key.controlKey) {
-        keyNode.innerHTML = key[`${this.lang}_add`]
-          ? key[`${this.lang}_add`]
-          : key[this.lang].toUpperCase();
-      } else if (this.isCapsLockPressed() && !key.controlKey) {
-        keyNode.innerHTML = key[this.lang].toUpperCase();
-      } else {
-        keyNode.innerHTML = key[this.lang];
-      }
+      keyNode.innerHTML = this.getValue(key);
     });
+  }
+
+  updateText(code) {
+    const key = this.keys.find((el) => el.code === code);
+    if (!key.controlKey) {
+      this.textarea.value += this.getValue(key);
+    }
   }
 
   pressKey(code) {
@@ -89,6 +100,7 @@ class Keyboard {
 
   press(code) {
     this.pressKey(code);
+    this.updateText(code);
     this.chnageLang();
     this.update();
   }
