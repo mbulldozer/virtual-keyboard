@@ -1,3 +1,7 @@
+body {
+    background-color: slategrey;
+}
+
 .container {
     width: 900px;
     margin: 0 auto;
@@ -7,6 +11,10 @@
     display: block;
     width: 900px;
     margin-bottom: 10px;
+    background-color: #3C3C3C;
+    color: #FFF;
+    font-size: 18px;
+    resize: none;
 }
 
 .keyboard {
@@ -19,18 +27,34 @@
     border-radius: 4px;
     padding: 5px;
     text-align: center;
-    font-weight: bold;
+    background-color: #3C3C3C;
 }
 
 .key {
     grid-column-end: span 2;
-    border: 1px solid slategray;
-    border-radius: 4px;
-    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+    transition: 0.2s ease-in-out;
+    color: #FFF;
     line-height: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.backspace, .caps, .enter, .left-shift {
+.key:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.pressed {
+    color: darkgrey;
+    background-color: #3C3C3C;
+}
+
+.pressed:hover {
+    background-color: #3C3C3C;
+}
+
+.backspace, .caps, .enter {
     grid-column-end: span 4;
 }
 
@@ -38,13 +62,12 @@
     grid-column-end: span 3;
 }
 
-.space {
-    grid-column-end: span 12;
+.left-shift {
+    grid-column-end: span 6;
 }
 
-.letter {
-    /*padding-left: 22px;*/
-    /*padding-top: 12px;*/
+.space {
+    grid-column-end: span 12;
 }
 
 .fa {
