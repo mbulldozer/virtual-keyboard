@@ -9,6 +9,7 @@ class Keyboard {
     this.pressed = [];
     this.keyNodes = [];
     this.lang = localStorage.getItem('lang') || 'eng';
+    this.capslockCount = 0;
 
     this.init();
   }
@@ -151,7 +152,14 @@ class Keyboard {
 
   unpressKey(code) {
     const node = this.keyNodes.find((el) => el.dataset.code === code);
-    if (node) {
+    if (code === 'CapsLock') {
+      this.capslockCount += 1;
+      if (this.capslockCount === 2) {
+        this.pressed = this.pressed.filter((el) => el !== code);
+        node.classList.remove('pressed');
+        this.capslockCount = 0;
+      }
+    } else if (node) {
       this.pressed = this.pressed.filter((el) => el !== code);
       node.classList.remove('pressed');
     }
