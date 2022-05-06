@@ -77,8 +77,9 @@ class Keyboard {
 
   update() {
     this.keyNodes.forEach((keyNode) => {
-      const key = this.keys.find((el) => el.code === keyNode.dataset.code);
-      keyNode.innerHTML = this.getValue(key);
+      const node = keyNode;
+      const key = this.keys.find((el) => el.code === node.dataset.code);
+      node.innerHTML = this.getValue(key);
     });
   }
 
