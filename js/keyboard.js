@@ -26,8 +26,18 @@ class Keyboard {
     this.keyboard = document.createElement('div');
     this.keyboard.classList.add('keyboard');
 
+    const info = document.createElement('div');
+    const p1 = document.createElement('p');
+    const p2 = document.createElement('p');
+    const p3 = document.createElement('p');
+    p1.innerText = 'Клавиатура создана в операционной системе Windows';
+    p2.innerText = 'Для переключения языка комбинация: левыe shift + alt';
+    p3.innerText = 'Discord: @Aliaksandr Pauliukavets#8238';
+    info.classList.add('info');
+    info.append(p1, p2, p3);
+
     document.body.append(this.container);
-    this.container.append(this.textarea, this.keyboard);
+    this.container.append(this.textarea, this.keyboard, info);
 
     this.keys.forEach((key) => {
       const keyNode = document.createElement('button');
