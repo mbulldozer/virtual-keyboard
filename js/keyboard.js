@@ -31,7 +31,7 @@ class Keyboard {
     const p2 = document.createElement('p');
     const p3 = document.createElement('p');
     p1.innerText = 'Клавиатура создана в операционной системе Windows';
-    p2.innerText = 'Для переключения языка комбинация: левыe shift + alt';
+    p2.innerText = 'Для переключения языка комбинация: левыe ctrl + alt';
     p3.innerText = 'Discord: @Aliaksandr Pauliukavets#8238';
     info.classList.add('info');
     info.append(p1, p2, p3);
@@ -56,8 +56,10 @@ class Keyboard {
     });
   }
 
-  changeLang() {
-    if (this.pressed.includes('ShiftLeft') && this.pressed.includes('AltLeft')) {
+  changeLang(code) {
+    const conditionOne = this.pressed.includes('ControlLeft') && this.pressed.includes('AltLeft');
+    const conditionTwo = code === 'ControlLeft' || code === 'AltLeft';
+    if (conditionOne && conditionTwo) {
       this.lang = this.lang === 'eng' ? 'ru' : 'eng';
       localStorage.setItem('lang', this.lang);
     }
@@ -156,11 +158,11 @@ class Keyboard {
   press(code) {
     this.pressKey(code);
     this.updateText(code);
-    this.changeLang();
     this.update();
   }
 
   unpressKey(code) {
+    this.changeLang(code);
     const node = this.keyNodes.find((el) => el.dataset.code === code);
     if (code === 'CapsLock') {
       this.capslockCount += 1;
