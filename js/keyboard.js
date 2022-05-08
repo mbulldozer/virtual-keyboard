@@ -171,6 +171,12 @@ class Keyboard {
         node.classList.remove('pressed');
         this.capslockCount = 0;
       }
+    } else if (code === 'ShiftLeft' || code === 'ShiftRight') {
+      this.pressed = this.pressed.filter((el) => el !== 'ShiftLeft' && el !== 'ShiftRight');
+      const shiftLeft = this.keyNodes.find((el) => el.dataset.code === 'ShiftLeft');
+      const shiftRight = this.keyNodes.find((el) => el.dataset.code === 'ShiftRight');
+      shiftLeft.classList.remove('pressed');
+      shiftRight.classList.remove('pressed');
     } else if (node) {
       this.pressed = this.pressed.filter((el) => el !== code);
       node.classList.remove('pressed');
