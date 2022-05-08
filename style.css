@@ -15,7 +15,7 @@ body {
     color: #FFF;
     font-size: 18px;
     resize: none;
-    tab-size: 16;
+    tab-size: 5;
 }
 
 .keyboard {
@@ -71,8 +71,8 @@ body {
     grid-column-end: span 12;
 }
 
-.fa {
-    width: 100%;
+.arrow {
+    font-size: 16px;
 }
 
 .info {
