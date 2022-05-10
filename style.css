@@ -1,0 +1,89 @@
+body {
+    background-color: silver;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.textarea {
+    display: block;
+    width: 900px;
+    margin-bottom: 10px;
+    background-color: #3C3C3C;
+    color: #FFF;
+    font-size: 18px;
+    resize: none;
+    tab-size: 5;
+}
+
+.keyboard {
+    width: 890px;
+    display: grid;
+    grid-template-columns: repeat(30, 20px);
+    grid-template-rows: repeat(5, 40px);
+    gap: 10px;
+    border: 3px solid #282828;
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+    background-color: #3C3C3C;
+}
+
+.key {
+    grid-column-end: span 2;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+    transition: 0.3s ease-in-out;
+    color: #FFF;
+    line-height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.key:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.pressed {
+    color: darkgrey;
+    background-color: #3C3C3C;
+    border-radius: 12px;
+}
+
+.pressed:hover {
+    background-color: #3C3C3C;
+}
+
+.backspace, .caps, .enter {
+    grid-column-end: span 4;
+}
+
+.left-ctrl, .right-ctrl {
+    grid-column-end: span 3;
+}
+
+.left-shift {
+    grid-column-end: span 6;
+}
+
+.space {
+    grid-column-end: span 12;
+}
+
+.arrow {
+    font-size: 16px;
+}
+
+.info {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 18px;
+    color: #282828;
+}
+
+.info p {
+    margin: 0;
+}
