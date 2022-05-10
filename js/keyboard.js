@@ -109,41 +109,43 @@ class Keyboard {
     const start = this.textarea.selectionStart;
     const end = this.textarea.selectionEnd;
     const key = this.keys.find((el) => el.code === code);
-    if (!key.controlKey) {
-      this.textarea.value = this.getSubStr(0, start) + this.getValue(key) + this.getSubStr(end);
-      this.changePosition(start + 1);
-    } else if (code === 'Tab' || code === 'Enter' || code === 'Space') {
-      let s = code === 'Tab' ? '\t' : '\n';
-      switch (code) {
-        case 'Tab':
-          s = '\t';
-          break;
-        case 'Enter':
-          s = '\n';
-          break;
-        case 'Space':
-          s = ' ';
-          break;
-        default:
-          break;
-      }
-      this.textarea.value = this.getSubStr(0, start) + s + this.getSubStr(end);
-      this.changePosition(start + 1);
-    } else if (code === 'Backspace') {
-      if (start === end) {
-        this.textarea.value = this.getSubStr(0, start - 1) + this.getSubStr(end);
-        this.changePosition(start !== 0 ? start - 1 : 0);
-      } else {
-        this.textarea.value = this.getSubStr(0, start) + this.getSubStr(end);
+    if (key) {
+      if (!key.controlKey) {
+        this.textarea.value = this.getSubStr(0, start) + this.getValue(key) + this.getSubStr(end);
+        this.changePosition(start + 1);
+      } else if (code === 'Tab' || code === 'Enter' || code === 'Space') {
+        let s = code === 'Tab' ? '\t' : '\n';
+        switch (code) {
+          case 'Tab':
+            s = '\t';
+            break;
+          case 'Enter':
+            s = '\n';
+            break;
+          case 'Space':
+            s = ' ';
+            break;
+          default:
+            break;
+        }
+        this.textarea.value = this.getSubStr(0, start) + s + this.getSubStr(end);
+        this.changePosition(start + 1);
+      } else if (code === 'Backspace') {
+        if (start === end) {
+          this.textarea.value = this.getSubStr(0, start - 1) + this.getSubStr(end);
+          this.changePosition(start !== 0 ? start - 1 : 0);
+        } else {
+          this.textarea.value = this.getSubStr(0, start) + this.getSubStr(end);
+          this.changePosition(start);
+        }
+      } else if (code === 'Delete') {
+        if (start === end && end !== this.textarea.value.length) {
+          this.textarea.value = this.getSubStr(0, start) + this.getSubStr(end + 1);
+        } else {
+          this.textarea.value = this.getSubStr(0, start) + this.getSubStr(end);
+        }
         this.changePosition(start);
       }
-    } else if (code === 'Delete') {
-      if (start === end && end !== this.textarea.value.length) {
-        this.textarea.value = this.getSubStr(0, start) + this.getSubStr(end + 1);
-      } else {
-        this.textarea.value = this.getSubStr(0, start) + this.getSubStr(end);
-      }
-      this.changePosition(start);
     }
   }
 
